@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "divar-fixer",
+  "version": "2.4.1",
+  "description": "مدیریت آگهی و گفتگو، پیشنهادهای متناسب با آگهی و هشدار آگهی حذف‌شده",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Divar Fixer"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://divar.ir/*",
+        "https://chat.divar.ir/*"
+      ],
+      "js": [
+        "content.js",
+        "chat-manager.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
